@@ -8,7 +8,8 @@ This repository contains a radiomics analysis pipeline implemented as a series o
 This pipeline processes patient radiotherapy data by:
 1. **Loading Patient Data**: Data is imported in a standardised format for consistency and accuracy in analysis. The pipeline loads radiotherapy images and associated structure sets, specifically targeting the primary Clinical Target Volume.
 2. **Extracting and Renaming CTVs**: The primary tumour volumes and nodal regions are extracted. The original clinical names are stored for reference, and the structures are renamed to standardised reference names to facilitate consistent processing across datasets.
-3. **Saving Planning Scans**: Original planning CT scans are saved for image processing.
+3. **Data Preprocessing**: Structures and planning CT scans are preprocessed using a series of image normalisation, discretisation and augmentation methods
+4. **Radiomic Feature Extraction**: Features are extracted using PyRadiomics functionality for the CTV or Nodal regions 
 
 ## Preprocessing
 
