@@ -65,4 +65,9 @@ This pipeline is designed to streamline and standardise radiomics analysis, from
 
 This work was supported by Cancer Research UK RadNet Cambridge [C17918/A28870].
 
-<img src="./Radnet Cambridge logo.jpg" alt="RadNet logo" height="150"/>
+Try this markdown:
+
+![alt text](http://url/to/img.png)
+I think you can link directly to the raw version of an image if it's stored in your repository. i.e.
+
+![alt text](https://github.com/CeilidhWelsh/radiomics_analysis/blob/main/Radnet%20Cambridge%20%20logo.jpg)
