@@ -65,4 +65,4 @@ This pipeline is designed to streamline and standardise radiomics analysis, from
 
 This work was supported by Cancer Research UK RadNet Cambridge [C17918/A28870].
 
-<img src="./Radnet Cambridge logo.png" alt="RadNet logo" height="150"/>
+<img src="./Radnet Cambridge logo.jpg" alt="RadNet logo" height="150"/>
