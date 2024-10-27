@@ -48,8 +48,10 @@ Bash Script: run_scripts.sh - this is the script to be edited by the user to pas
 4. **Optional** recurrence_augmentation.py: This script extracts radiomic features from augmented images associated with patients in a radiotherapy dataset. It performs image augmentation on a subset of patients to balance the classes of the recurrence/non-recurrence datasets. It randomly extracts voxels from within the CTV or nodal volume as a method for augmentation. 
 5. radiomic_feature_extraction.py: This script pulls patient files from a specified location and executes a series of image preprocessing steps to enhance the reproducibility of the workflow. The script extracts radiomic features from planning images and their associated structures and saves the results in a CSV format.
 
-Additional functions: 
-1. 
+Additional functions are called via the following scripts: 
+1. structure_analysis_functions.py
+2. data_preprocessing_functions.py
+3. radiomics_features_functions.py 
 
 
 ## Future Development
