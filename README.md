@@ -62,3 +62,7 @@ Plans for future development include integrating additional machine learning mod
 ---
 
 This pipeline is designed to streamline and standardise radiomics analysis, from data import through feature extraction and machine learning analysis, in a reproducible and scalable framework for clinical research applications.
+
+This work was supported by Cancer Research UK RadNet Cambridge [C17918/A28870].
+
+<img src="Radnet Cambridge logo.png" alt="RadNet logo" height="150"/>
