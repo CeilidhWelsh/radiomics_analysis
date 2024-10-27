@@ -28,17 +28,29 @@ PyRadiomics is implemented to load the preprocessed planning CT images and CTV m
 The extracted radiomic features are then analysed using several machine learning models to investigate their predictive power for locoregional recurrence. This phase includes:
 1. **Predictive Model Training**: Multiple machine learning models, including Logistic Regression, Support Vector Machines (SVM), and Decision Trees, are trained to determine if specific radiomic features are associated with patient outcomes.
 2. **Few-Shot Learning and Deep Learning**: Development is ongoing to integrate few-shot learning approaches and pre-trained deep learning models for cases with limited sample sizes, aimed at enhancing prediction accuracy. Features deemed predictive of outcomes are cross-correlated with those extracted by PyRadiomics to ensure consistency and enhance interpretability in radiomic signature development.
-3. **Feature Validation**: These features can then be checked in an additional dataset where the scripts for structure extraction, image preprocessing and radiomic feature extraction can be employed and the final data used in the pre-trained model to determine models metrics on a new datase
+3. **Feature Validation**: These features can then be checked in an additional dataset where the scripts for structure extraction, image preprocessing and radiomic feature extraction can be employed and the final data used in the pre-trained model to determine model metrics on a new dataset
 
 ## Dependencies
 
 - Python 3.10.13
+- scikit-rt 0.7.2
 - [pyRadiomics](https://pyradiomics.readthedocs.io/en/latest/)
-- Additional Python libraries: numpy, pandas, scikit-learn, etc.
 
 ## Usage
 
-This pipeline can be run as a sequence of scripts, each loaded in a shell script, with each stage designed to accept outputs from the previous stage. For detailed instructions on each stage and customisable parameters, please refer to the respective script documentation within each file.
+This pipeline can be run as a sequence of scripts, each loaded in a shell script, with each stage designed to accept outputs from the previous stage. For detailed instructions on each stage and customisable parameters, please refer to each file's script documentation.
+
+### Please utilise the scripts in the following order: 
+Bash Script: run_scripts.sh - this is the script to be edited by the user to pass directory paths and trial information and select which scripts to run as part of the pipeline 
+1. structure_extraction.py: Script to analyse planning structure sets for each patient, isolating primary and nodal CTV (Clinical Target Volume) structures with the highest dose. Generates a dictionary of these structures, which is then saved as a CSV file in the specified results directory.
+2. save_structures_for_radiomics.py: This script processes the planning structure sets for each patient, extracting the highest dose CTV (Clinical Target Volume) and CTV Node (if applicable), and saves these structures as NIfTI (.nii.gz) files. Additionally, it saves the original planning structure as a NIfTI file.
+3. image_preprocessing.py: This script pulls the patient file from the saved location and executes a series of image preprocessing steps to enhance the reproducibility of the workflow. The main steps include resampling the planning image, applying masks, and discretizing the image data into specified bins. The results are saved as NIfTI files, and a summary of voxel removal percentages is recorded.
+4. **Optional** recurrence_augmentation.py: This script extracts radiomic features from augmented images associated with patients in a radiotherapy dataset. It performs image augmentation on a subset of patients to balance the classes of the recurrence/non-recurrence datasets. It randomly extracts voxels from within the CTV or nodal volume as a method for augmentation. 
+5. radiomic_feature_extraction.py: This script pulls patient files from a specified location and executes a series of image preprocessing steps to enhance the reproducibility of the workflow. The script extracts radiomic features from planning images and their associated structures and saves the results in a CSV format.
+
+Additional functions: 
+1. 
+
 
 ## Future Development
 
