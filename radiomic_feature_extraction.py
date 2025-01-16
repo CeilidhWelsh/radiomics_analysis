@@ -41,8 +41,10 @@ from skrt.registration import get_default_pfiles, Registration, set_elastix_dir
 from skrt.better_viewer import BetterViewer
 from skrt.simulation import SyntheticImage
 
-from radiomics import featureextractor  
-from radiomic_analysis_classes import * 
+from radiomics import featureextractor
+from radiomic_features_functions import * 
+
+#from radiomic_analysis_classes import * 
 
 # Pull in the variables from the shell script 
 dataset_name = sys.argv[1]                # Name of the dataset
