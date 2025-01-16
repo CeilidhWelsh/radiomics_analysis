@@ -30,7 +30,7 @@ from pathlib import Path
 import ast
 
 # Importing custom radiomic analysis classes
-from radiomic_analysis_classes import * 
+from radiomic_features_functions import * 
 
 # Pull in the variables from the shell script
 dataset_name = sys.argv[1]
