@@ -17,7 +17,7 @@ Imports:
     - matplotlib.pyplot: For data visualisation (not used in the script but imported).
     - pathlib.Path: For handling filesystem paths.
     - radiomics: Library for extracting features from medical images.
-    - radiomic_analysis_classes: Custom functions and classes for specific analyses.
+    - radiomic_features_functions: Custom functions and classes for specific analyses.
 
 Usage:
     Run the script from the command line with the following parameters:
