@@ -18,7 +18,7 @@ Imports:
     re: For regular expression operations.
     ast: For evaluating string representations of Python expressions.
     structure_analysis_functions: Custom functions for structure processing and analysis 
-    (imported from radiomic_analysis_classes).
+    (imported from radiomic_features_functions).
 
 Usage:
     python <script_name.py> <dataset_name> <planning_data_dir> <data_dir> <local> <subset> <patient_list> <additional_dataset_name>
