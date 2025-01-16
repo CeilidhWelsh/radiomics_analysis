@@ -64,6 +64,12 @@ else:
 # Instantiate the extractor
 extractor = featureextractor.RadiomicsFeatureExtractor()
 
+# Set the normalization parameter to True for the extractor
+extractor.settings['normalize'] = True
+
+# Test the extractor has been set to True
+print('Extractor set to:', extractor.settings['normalize'])
+
 # Initialise an empty DataFrame for storing radiomic features
 radiomics_df = pd.DataFrame()
 
