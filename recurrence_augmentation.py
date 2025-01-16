@@ -44,7 +44,7 @@ from skrt.better_viewer import BetterViewer
 from skrt.simulation import SyntheticImage
 
 from radiomics import featureextractor  
-from radiomic_analysis_classes import * 
+from radiomic_features_functions import * 
 
 # Pull in the variables from the shell script 
 dataset_name = sys.argv[1]               # Name of the dataset
